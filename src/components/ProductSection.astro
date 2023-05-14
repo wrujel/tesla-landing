@@ -1,7 +1,11 @@
+---
+const {src, title, description, underline=true} = Astro.props
+---
+
 <section class="landing-section h-screen w-screen z-10 bg-black relative overflow-hidden text-center pr-4" data-header-color="black">
   <div class="relative z-30 h-full flex flex-col">
-    <h2 class="text-black mt-[236px] text-[40px] pt-[1px] font-medium leading-[48px] tracking-[-0.6px]">Model 3</h2>
-    <a class="text-black text-sm font-normal pt-[6px] pb-4 underline underline-offset-[3px]">Lease from $399/mo</a>
+    <h2 class="text-black mt-[236px] text-[40px] pt-[1px] font-medium leading-[48px] tracking-[-0.6px]">{title}</h2>
+    <a class={`text-black text-sm font-normal pt-[6px] pb-4 ${underline ? 'underline underline-offset-[3px]' : ''}`}>{description}</a>
 
     <div class="flex flex-col flex-grow justify-end pb-[72px]">
       <div class="mb-2">
@@ -16,6 +20,6 @@
   </div>
 
   <div class="absolute top-0 -left-2">
-    <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/h_2560,w_4096,c_fit,f_auto,q_auto:best/Homepage-Model-3-Desktop-LHD" alt="Accesories" class="h-screen w-screen object-cover object-center">
+    <img src={src} alt="Accesories" class="h-screen w-screen object-cover object-center">
   </div>
 </section>
