@@ -1,4 +1,62 @@
-# Astro Starter Kit: Basics
+<div align='center'>
+  <h1>Tesla Landing with Astro</h1>
+</div>
+
+<div align='center'>
+  <a href='/README.md'>
+    <img
+      src='https://img.shields.io/badge/Status-Complete-success.svg'
+      alt='Status'
+    />
+  </a>
+  <a href='/package.json'>
+    <img 
+      src='https://img.shields.io/badge/Version-1.0.0-blue.svg'
+      alt='Version'
+    />
+  </a>
+  <a href='/LICENSE'>
+    <img
+      src='https://img.shields.io/badge/License-MIT-green.svg'
+      alt='License'
+    />
+  </a>
+  <a href='https://tailwindcss.com/'>
+    <img
+      src='https://img.shields.io/badge/TailwindCSS-2.2.7-blue.svg?style=flat&logo=tailwindcss'
+      alt='TailwindCSS'
+    />
+  </a>
+  <a href='https://www.typescriptlang.org/'>
+    <img
+      src='https://img.shields.io/badge/TypeScript-4.4.3-blue.svg?style=flat&logo=typescript'
+      alt='TypeScript'
+    />
+  </a>
+  <a href='https://www.netlify.com/'>
+    <img
+      src='https://img.shields.io/badge/Netlify-Deployed-success.svg?style=flat&logo=netlify'
+      alt='Netlify'
+    />
+  </a>
+  <a href='https://astro.build/'>
+    <img
+      src='https://img.shields.io/badge/Astro-0.21.0-blue.svg?style=flat&logo=astro'
+      alt='Astro'
+    />
+  </a>
+</div>
+<br />
+
+This is a clone of the Tesla landing page using Astro. This is a project to learn Astro and TailwindCSS. You can check out the demo [here](https://sage-daffodil-4904c3.netlify.app/)
+
+## Tech Stack
+- [Astro](https://astro.build/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Netlify](https://www.netlify.com/)
+
+## Astro Starter Kit: Basics
 
 ```
 npm create astro@latest -- --template basics
@@ -53,3 +111,6 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Demo
+You can check out the demo [here](https://sage-daffodil-4904c3.netlify.app/)
