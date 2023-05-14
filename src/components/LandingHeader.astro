@@ -1,0 +1,30 @@
+---
+import Logo from "./Logo.astro";
+
+---
+
+<header class="flex items-center z-30 fixed top-0 h-14 w-full justify-between">
+  <div class="h-full flex flex-grow basis-0 pl-[32px] items-center justify-start">
+    <Logo/>
+  </div>
+
+  <nav class="h-full flex items-center justify-center">
+    <ul class="h-full flex items-center text-sm font-semibold px-2 [&>li>a]:py-2 [&>li>a]:px-4 text-white">
+      <li><a href="#">Model S</a></li>
+      <li><a href="#">Model 3</a></li>
+      <li><a href="#">Model X</a></li>
+      <li><a href="#">Model Y</a></li>
+      <li><a href="#">Solar Roof</a></li>
+      <li><a href="#">Solar Panels</a></li>
+      <li><a href="#">Powerwall</a></li>
+    </ul>
+  </nav>
+
+  <nav class="h-full flex flex-grow justify-end basis-0 items-center pr-[32px]">
+    <ul class="h-full flex items-center text-sm font-semibold [&>li>a]:py-2 [&>li>a]:px-4 text-white">
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">Menu</a></li>
+    </ul>
+  </nav>
+</header>

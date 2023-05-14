@@ -1,62 +1,13 @@
 ---
+import LandingHeader from '../components/LandingHeader.astro';
+import MainSection from '../components/MainSection.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Tesla Landing">
 	<main>
-		<header class="flex items-center z-30 fixed top-0 h-14 w-full justify-between">
-			<div class="h-full flex flex-grow basis-0 pl-[32px] items-center justify-start">
-				<a href="#" class="pl-[16px] text-white">
-					<svg class="w-[120px] h-[24px]" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
-					</svg>
-				</a>
-			</div>
-
-			<nav class="h-full flex items-center justify-center">
-				<ul class="h-full flex items-center text-sm font-semibold px-2 [&>li>a]:py-2 [&>li>a]:px-4 text-white">
-					<li><a href="#">Model S</a></li>
-					<li><a href="#">Model 3</a></li>
-					<li><a href="#">Model X</a></li>
-					<li><a href="#">Model Y</a></li>
-					<li><a href="#">Solar Roof</a></li>
-					<li><a href="#">Solar Panels</a></li>
-					<li><a href="#">Powerwall</a></li>
-				</ul>
-			</nav>
-
-			<nav class="h-full flex flex-grow justify-end basis-0 items-center pr-[32px]">
-				<ul class="h-full flex items-center text-sm font-semibold [&>li>a]:py-2 [&>li>a]:px-4 text-white">
-					<li><a href="#">Shop</a></li>
-					<li><a href="#">Account</a></li>
-					<li><a href="#">Menu</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<section class="h-screen w-screen z-10 bg-black relative overflow-hidden text-center">
-			<div class="relative z-30 h-full flex flex-col">
-				<h2 class="text-white mt-[236px] text-[40px] font-medium leading-[48px] tracking-[-0.6px]">Experience Tesla</h2>
-				<p class="text-white text-sm font-normal pt-2 pb-4">Schedule a Demo Drive Today</p>
-
-				<div class="flex flex-col flex-grow justify-end pb-[72px]">
-					<div class="mb-2">
-						<div class="text-white text-sm font-medium border-[3px] border-white leading-4 rounded px-6 py-1 inline-flex blo min-w-[264px] h-[40px] items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer">
-							<a href="#">Demo Drive</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="absolute top-0">
-				<video 
-					autoplay
-					loop
-					src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Test_Drive-NA-Desktop.mp4"
-					class="w-full h-screen object-cover"
-				/>
-			</div>
-		</section>
+		<LandingHeader/>
+		<MainSection/>
 	</main>
 </Layout>
 
