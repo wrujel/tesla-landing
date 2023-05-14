@@ -1,81 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Tesla Landing">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<header class="flex items-center z-30 fixed top-0 h-14 w-full justify-between">
+			<div class="h-full flex flex-grow basis-0 pl-[32px] items-center justify-start">
+				<a href="#" class="pl-[16px] text-white">
+					<svg class="w-[120px] h-[24px]" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"/>
+					</svg>
+				</a>
+			</div>
+
+			<nav class="h-full flex items-center justify-center">
+				<ul class="h-full flex items-center text-sm font-semibold px-2 [&>li>a]:py-2 [&>li>a]:px-4 text-white">
+					<li><a href="#">Model S</a></li>
+					<li><a href="#">Model 3</a></li>
+					<li><a href="#">Model X</a></li>
+					<li><a href="#">Model Y</a></li>
+					<li><a href="#">Solar Roof</a></li>
+					<li><a href="#">Solar Panels</a></li>
+					<li><a href="#">Powerwall</a></li>
+				</ul>
+			</nav>
+
+			<nav class="h-full flex flex-grow justify-end basis-0 items-center pr-[32px]">
+				<ul class="h-full flex items-center text-sm font-semibold [&>li>a]:py-2 [&>li>a]:px-4 text-white">
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">Account</a></li>
+					<li><a href="#">Menu</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="h-screen w-screen z-10 bg-black relative overflow-hidden text-center">
+			<div class="relative z-30 h-full flex flex-col">
+				<h2 class="text-white mt-[236px] text-[40px] font-medium leading-[48px] tracking-[-0.6px]">Experience Tesla</h2>
+				<p class="text-white text-sm font-normal pt-2 pb-4">Schedule a Demo Drive Today</p>
+
+				<div class="flex flex-col flex-grow justify-end pb-[72px]">
+					<div class="mb-2">
+						<div class="text-white text-sm font-medium border-[3px] border-white leading-4 rounded px-6 py-1 inline-flex blo min-w-[264px] h-[40px] items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer">
+							<a href="#">Demo Drive</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="absolute top-0">
+				<video 
+					autoplay
+					loop
+					src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Test_Drive-NA-Desktop.mp4"
+					class="w-full h-screen object-cover"
+				/>
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	
 </style>
