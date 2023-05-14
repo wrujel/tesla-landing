@@ -3,13 +3,13 @@ import Logo from "./Logo.astro";
 
 ---
 
-<header class="flex items-center z-30 fixed top-0 h-14 w-full justify-between">
+<header id="landing-header" class="flex items-center z-30 fixed top-0 h-14 w-full justify-between">
   <div class="h-full flex flex-grow basis-0 pl-[32px] items-center justify-start">
     <Logo/>
   </div>
 
   <nav class="h-full flex items-center justify-center">
-    <ul class="h-full flex items-center text-sm font-semibold px-2 [&>li>a]:py-2 [&>li>a]:px-4 text-white">
+    <ul class="h-full flex items-center text-sm font-medium px-2 [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:transition-colors [&>li>a]:duration-500 text-current">
       <li><a href="#">Model S</a></li>
       <li><a href="#">Model 3</a></li>
       <li><a href="#">Model X</a></li>
@@ -21,10 +21,35 @@ import Logo from "./Logo.astro";
   </nav>
 
   <nav class="h-full flex flex-grow justify-end basis-0 items-center pr-[32px]">
-    <ul class="h-full flex items-center text-sm font-semibold [&>li>a]:py-2 [&>li>a]:px-4 text-white">
+    <ul class="h-full flex items-center text-sm font-medium [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:transition-colors [&>li>a]:duration-500 text-current">
       <li><a href="#">Shop</a></li>
       <li><a href="#">Account</a></li>
       <li><a href="#">Menu</a></li>
     </ul>
   </nav>
 </header>
+
+<script>
+  const $header = document.querySelector('#landing-header') as HTMLElement
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.95
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const {isIntersecting} = entry
+  
+      if (isIntersecting) {
+        const color = entry.target.getAttribute('data-header-color')
+        $header.style.color = color || 'white'
+      }
+    })
+  }, observerOptions)
+
+  const $sections = document.querySelectorAll('.landing-section')
+  $sections.forEach($section => {
+    observer.observe($section)
+  })
+</script>
