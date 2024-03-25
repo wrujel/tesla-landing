@@ -34,7 +34,7 @@
   [Demo](https://sage-daffodil-4904c3.netlify.app/) · [Report issue](/issues) · [Suggest something](/issues)
 </div>
 
-### Table of Contents
+## Table of Contents
 - [Tech Stack](#tech-stack)
 - [Astro Starter Kit: Basics](#astro-starter-kit-basics)
 - [🚀 Project Structure](#-project-structure)
