@@ -128,7 +128,7 @@ You can check out the demo:
 [react-player]: https://img.shields.io/badge/React--Player-gray?style=for-the-badge&logo=npm
 [mongodb]: https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
 [vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
-[astro]: https://img.shields.io/badge/Astro-0.21.0-blue?style=for-the-badge&logo=astro
+[astro]: https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE
 [netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
 
 <!-- Badges links -->
