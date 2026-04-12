@@ -1,11 +1,3 @@
-[demo]: https://img.shields.io/badge/🚀%20Live%20Demo-000000?style=for-the-badge&&logoColor=white&color=0a6bdb
-[status-link]: https://github.com/wrujel/monitor-repos
-[tests-link]: https://github.com/wrujel/monitor-tests
-
-[demo-link]: https://sage-daffodil-4904c3.netlify.app/
-[status]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwrujel%2Fmonitor-repos%2Fmain%2Fdata%2Ftesla-landing.json
-[tests]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwrujel%2Fmonitor-tests%2Fmain%2Fdata%2Ftesla-landing.json
-
 <div align='center'>
 
   [![demo][demo]][demo-link]
@@ -19,6 +11,7 @@
     <img
       src='/public/screenshot.png'
       alt='Screenshot of the app'
+      width='100%'
     />
   </a>
 </div>
@@ -29,121 +22,158 @@
 
 <div align='center'>
 
-  [![Typescript][typescript]][typescript-link]
-  [![Tailwindcss][tailwindcss]][tailwindcss-link]
   [![Astro][astro]][astro-link]
-  [![Netlify][netlify]][netlify-link]
+  [![TypeScript][typescript]][typescript-link]
+  [![Tailwind CSS][tailwindcss]][tailwindcss-link]
 
 </div>
 
 <div align='center'>
-  This is a clone of the Tesla landing page using Astro. This is a project to learn Astro and TailwindCSS.
+  Landing page inspired by Tesla's official website, built with Astro, TypeScript, and Tailwind CSS. Features smooth snap scrolling, video backgrounds, interactive navigation, and responsive product sections.
 
-  [Demo](https://sage-daffodil-4904c3.netlify.app/) · [Report issue](/issues) · [Suggest something](/issues)
+  [Demo]({{DEMO_URL}}) · [Report issue](/issues) · [Suggest something](/issues)
 </div>
 
 ## Table of Contents
+
 - [Table of Contents](#table-of-contents)
+- [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Astro Starter Kit: Basics](#astro-starter-kit-basics)
-- [🚀 Project Structure](#-project-structure)
-- [🧞 Commands](#-commands)
-- [👀 Want to learn more?](#-want-to-learn-more)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running locally](#running-locally)
+  - [Build](#build)
+- [Environment Variables](#environment-variables)
+- [Project Structure](#project-structure)
 - [Demo](#demo)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- [x] Tesla-inspired landing page design
+- [x] Smooth snap scrolling between sections
+- [x] Video background on hero section
+- [x] Interactive navigation with backdrop blur effect
+- [x] Section-aware header color changes using IntersectionObserver
+- [x] Product showcase sections for Model 3, Model Y, Model S, Model X
+- [x] Solar Panels and Solar Roof sections
+- [x] Accessories section
+- [x] Responsive design with Tailwind CSS
+- [x] Custom Gotham SSm A font
+- [x] Reusable ProductSection component with configurable props
+- [x] CTA buttons (Order Now / Demo Drive)
+- [x] Built with Astro for fast static site generation
+- [x] TypeScript strict mode
 
 ## Tech Stack
+
 - [Astro](https://astro.build/)
-- [TailwindCSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Netlify](https://www.netlify.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-## Astro Starter Kit: Basics
+## Getting Started
 
+### Prerequisites
+
+- Node.js 16+
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/wrujel/tesla-landing.git
+cd tesla-landing
+npm install
 ```
-npm create astro@latest -- --template basics
+
+### Running locally
+
+```bash
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
 
-## 🚀 Project Structure
+### Build
 
-Inside of your Astro project, you'll see the following folders and files:
+```bash
+npm run build
+```
+
+| Command             | Action                                           |
+| :------------------ | :----------------------------------------------- |
+| `npm install`       | Installs dependencies                            |
+| `npm run dev`       | Starts local dev server at `localhost:4321`      |
+| `npm run build`     | Build your production site to `./dist/`          |
+| `npm run preview`   | Preview your build locally, before deploying     |
+| `npm run astro ...` | Run CLI commands like `astro add`, `astro check` |
+
+## Environment Variables
+
+This project does not require any environment variables for basic usage.
+
+## Project Structure
 
 ```
 /
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── screenshot.png
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├── ChargeSection.astro
+│   │   ├── LandingHeader.astro
+│   │   ├── Logo.astro
+│   │   ├── MainSection.astro
+│   │   └── ProductSection.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
-└── package.json
+├── astro.config.mjs
+├── package.json
+├── tailwind.config.cjs
+└── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
 ## Demo
+
 You can check out the demo:
 
-[![demo][demo]][demo-link]
+[![Demo][demo]][demo-link]
 
+## Contributing
+
+Contributions are welcome! If you have suggestions or find bugs, please open an issue or submit a pull request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
 
 <!-- Badges -->
-[nextjs]: https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js
+[astro]: https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE
 [typescript]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
 [tailwindcss]: https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
-[react]: https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white
-[lodash]: https://img.shields.io/badge/Lodash-gray?style=for-the-badge&logo=lodash
-[next-auth]: https://img.shields.io/badge/Next--Auth-black?style=for-the-badge&logo=next.js
-[prisma]: https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white
-[axios]: https://img.shields.io/badge/Axios-56A7F7?style=for-the-badge&logo=axios&logoColor=white
-[react-icons]: https://img.shields.io/badge/React--Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white
-[swr]: https://img.shields.io/badge/SWR-black?style=for-the-badge&logo=next.js
-[zustand]: https://img.shields.io/badge/Zustand-gray?style=for-the-badge&logo=npm
-[react-player]: https://img.shields.io/badge/React--Player-gray?style=for-the-badge&logo=npm
-[mongodb]: https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
-[vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
-[astro]: https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE
-[netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
 
-<!-- Badges links -->
-[nextjs-link]: https://nextjs.org/
+<!-- Badge links -->
+[astro-link]: https://astro.build/
 [typescript-link]: https://www.typescriptlang.org/
 [tailwindcss-link]: https://tailwindcss.com/
-[react-link]: https://reactjs.org/
-[lodash-link]: https://lodash.com/
-[next-auth-link]: https://next-auth.js.org/
-[prisma-link]: https://www.prisma.io/
-[axios-link]: https://axios-http.com/
-[react-icons-link]: https://react-icons.github.io/react-icons/
-[swr-link]: https://swr.vercel.app/
-[zustand-link]: https://zustand.surge.sh/
-[react-player-link]: https://www.npmjs.com/package/react-player
-[mongodb-link]: https://www.mongodb.com/
-[vercel-link]: https://vercel.com/
-[astro-link]: https://astro.build/
-[netlify-link]: https://www.netlify.com/
+
+<!-- Status badges -->
+[demo]: https://img.shields.io/badge/🚀%20Live%20Demo-Click%20Here-blue?style=for-the-badge
+[demo-link]: https://sage-daffodil-4904c3.netlify.app/
+[status]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwrujel%2Fmonitor-repos%2Fmain%2Fdata%2Ftesla-landing.json
+[status-link]: https://github.com/wrujel/monitor-repos
+[tests]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwrujel%2Fmonitor-tests%2Fmain%2Fdata%2Ftesla-landing.json
+[tests-link]: https://github.com/wrujel/monitor-tests
