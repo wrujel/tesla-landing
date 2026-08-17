@@ -9,7 +9,7 @@
 <div align='center'>
   <a href='/'>
     <img
-      src='/public/screenshot.png'
+      src='screenshot.webp'
       alt='Screenshot of the app'
       width='100%'
     />
@@ -31,7 +31,7 @@
 <div align='center'>
   Landing page inspired by Tesla's official website, built with Astro, TypeScript, and Tailwind CSS. Features smooth snap scrolling, video backgrounds, interactive navigation, and responsive product sections.
 
-  [Demo]({{DEMO_URL}}) · [Report issue](/issues) · [Suggest something](/issues)
+  [Demo][demo-link] · [Report issue](/issues) · [Suggest something](/issues)
 </div>
 
 ## Table of Contents
