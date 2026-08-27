@@ -3,3 +3,10 @@
 # build image still defaults to Node 20, so the version must be pinned here.
 [build.environment]
   NODE_VERSION = "22"
+
+# The site's build cache once carried an npm-era node_modules (old CJS
+# `cookie`), which broke astro's ESM imports after the pnpm switch. Wiping
+# node_modules before a frozen install makes every deploy self-healing.
+[build]
+  command = "rm -rf node_modules && pnpm install --frozen-lockfile && pnpm run build"
+  publish = "dist"
