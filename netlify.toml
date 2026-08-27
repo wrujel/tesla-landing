@@ -1,0 +1,5 @@
+# Netlify auto-detects pnpm from pnpm-lock.yaml and the `packageManager`
+# field in package.json — but pnpm 11 needs Node >= 22.13 while Netlify's
+# build image still defaults to Node 20, so the version must be pinned here.
+[build.environment]
+  NODE_VERSION = "22"
