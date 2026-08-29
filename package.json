@@ -2,7 +2,7 @@
   "name": "tesla-landing",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@11.22.0",
+  "packageManager": "pnpm@11.24.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.2.7",
+    "astro": "^7.2.9",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
