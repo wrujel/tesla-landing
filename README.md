@@ -10,7 +10,7 @@
   <a href='/'>
     <img
       src='screenshot.webp'
-      alt='Screenshot of the app'
+      alt='Tesla-inspired landing page with a night driving video background, model navigation, and an Experience Tesla headline above a Demo Drive button.'
       width='100%'
     />
   </a>
@@ -29,7 +29,7 @@
 </div>
 
 <div align='center'>
-  Landing page inspired by Tesla's official website, built with Astro, TypeScript, and Tailwind CSS. Features smooth snap scrolling, video backgrounds, interactive navigation, and responsive product sections.
+  A landing page inspired by Tesla's official website, built with Astro, TypeScript and Tailwind CSS. A video-backed hero opens onto snap-scrolling showcases for Model 3, Model Y, Model S, Model X, Solar Panels, Solar Roof and accessories, with a backdrop-blurred header that recolors per section through an IntersectionObserver.
 
   [Demo][demo-link] · [Report issue](/issues) · [Suggest something](/issues)
 </div>
